@@ -1,0 +1,9 @@
+import './tools' //工具函数
+import './message' //话术
+import './array' //Array原型扩展
+import './date' //Date原型扩展
+import './Object' //Object扩展（非原型）
+import './Math' //Math扩展
+import './string' //String原型扩展
+import './directives' //指令扩展
+import './validator' //校验库函数

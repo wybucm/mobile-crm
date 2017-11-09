@@ -1,0 +1,78 @@
+/************************************* 继承类定义 *************************************/
+
+//文字超出一行显示省略号
+%no-break {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+//占满父元素的背景，子div自动
+%flex-backdrop {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: $backdrop-bg;
+    &>div {
+        border-radius: $border-radius2;
+        background-color: #fff;
+    }
+}
+
+
+/*************************************** 宏定义 ***************************************/
+
+/**
+ * 设置背景色，按下元素时背景色自动加深
+ * @param $color-背景颜色
+ */
+
+@mixin bg($color) {
+    background-color: $color;
+    &:active {
+        background-color: $color - #222;
+    }
+}
+
+
+/**
+ * 设置按钮背景色和文字颜色，按下按钮或loading时背景色自动加深、文字自动增加透明度
+ * @param $bg-背景颜色
+ * @param [$bg=#fff]-文字颜色
+ */
+
+@mixin button-color($bg, $fg:#fff) {
+    background-color: $bg;
+    color: $fg;
+    &.loading,
+    &:active {
+        color: rgba($fg, .4);
+        background-color: $bg - #222;
+    }
+}
+
+
+/**
+ * 超出指定行数时显示省略号
+ * @param $line-行数
+ * @desc 1行时，推荐使用%no-break;
+ */
+
+@mixin no-break($line) {
+    @if $line==1 {
+        @extend %no-break;
+    }
+    @else {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: $line;
+        -webkit-box-orient: vertical;
+    }
+}

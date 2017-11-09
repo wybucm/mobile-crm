@@ -1,0 +1,137 @@
+/** 通用样式 **/
+
+//按下时半透明
+.holdable:active {
+    opacity: 0.5;
+}
+
+//文字超长时显示省略号
+.no-break {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+//数字角标，父元素需要相对或绝对定位
+mark {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    padding: 0.1rem 0.2rem;
+    font-size: 0.7rem;
+    line-height: 1;
+    text-align: center;
+    background-color: $red-bg;
+    color: #fff;
+    border-radius: 10rem;
+    min-width: 0.5rem;
+}
+/*************************************** 布局 *********************************************/
+
+/**
+ * 通用列表样式
+ * 在列表的每一行元素绑定.common-li，或者在<ul>绑定.common-ul使所有<li>生效
+ * 每一行元素的子元素中：
+        字体图标代表左图标，
+        <label>代表左文本，
+        .value代表右文本，
+        .select代表下拉选择文本（自带下箭头），
+        <a>代表右链接（自带右箭头）
+ * 可以内嵌<v-input>
+ * @example 
+ *  <div class="common-li">
+        <label>左边文本</label>
+        <span class="value">右边文本</span>
+    </div>
+    <ul class="common-ul">
+        <li>
+            <i class="icon-0"/>
+            <label>左边文本</label>
+            <a>右边链接</a>
+        </li>
+        <v-input v-model="input">
+            <label>输入框文本</label>
+        </v-input>
+    </div>
+    </ul>
+ **/
+
+.common-li,
+.common-ul > li {
+    min-height: 3.5rem;
+    overflow: hidden;
+    background-color: #fff;
+    border-bottom:solid 1px $gray-border;
+    & > label,
+    & > [class^="icon-"],
+    & > [class*=" icon-"] {
+        float: left;
+        margin: 1rem 0 0 1rem;
+    }
+    & > [class^="icon-"],
+    & > [class*=" icon-"] {
+        margin: 0.65rem -1rem 0 0.5rem;
+        padding: 0.5rem;
+    }
+    & > .value,
+    & > .select,
+    & > a {
+        float: left;
+        margin: 1rem 1rem 0;
+        line-height: 1.5rem;
+    }
+    & > .select:after {
+        content: "\e912";
+        float: right;
+        margin-left: 0.5rem;
+        font-family: "icomoon";
+        font-size: 1rem;
+        -webkit-font-smoothing: antialiased;
+    }
+    & > a {
+        float: right;
+        &:after {
+            content: "\e90e";
+            float: right;
+            margin-left: 0.5rem;
+            font-family: "icomoon";
+            font-size: 1.5rem;
+            -webkit-font-smoothing: antialiased;
+        }
+    }
+}
+
+/**
+ * 通用列表样式（简单版，没有边框，行高叫小）
+ * 在列表的每一行元素绑定.simple-li，或者在<ul>绑定.simple-ul使所有<li>生效
+ * 每一行元素的子元素中：
+        <label>代表左文本，
+        .value代表右文本
+ * @example 
+ *  <div class="simple-li">
+        <label>左边文本</label>
+        <span class="value">右边文本</span>
+    </div>
+    <ul class="simple-ul">
+        <li>
+            <label>左边文本</label>
+            <span class="value">右边文本</span>
+        </li>
+    </ul>
+ **/
+
+.simple-li,
+.simple-ul > li {
+    min-height: 2.5rem;
+    overflow: hidden;
+    background-color: #fff;
+    & > label {
+        float: left;
+        margin-left: 1rem;
+        line-height: 2.5rem;
+    }
+    & > .value {
+        float: right;
+        margin: 0.5rem 1rem 0;
+        line-height: 1.5rem;
+    }
+}

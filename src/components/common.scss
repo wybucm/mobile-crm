@@ -1,0 +1,30 @@
+@import "../common/css/index";
+%ui-common-window {
+    @extend %flex-backdrop;
+    & > div {
+        overflow: hidden;
+        h3 {
+            padding: 0.5rem 1rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-align: center;
+            border-bottom: solid 1px $light-border;
+        }
+        .btns {
+            display: -webkit-box;
+            overflow: hidden;
+            border-top: solid 1px $gray-border;
+            button {
+                -webkit-box-flex: 1;
+                margin: 0;
+                padding: 1rem;
+                border-left:solid 1px $gray-border;
+                border-radius: 0;
+                @include button-color(#fff, $blue-font);
+                &:first-child {
+                    border-left: none;
+                }
+            }
+        }
+    }
+}

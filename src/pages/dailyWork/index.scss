@@ -1,0 +1,261 @@
+$red-font: #E73636; //红色 目标栏目下划线颜色
+$white-font: #fff; //白色
+$orange-font: #fe704c; //橙色
+@import '../../common/css/index';
+main {
+    display: flex;
+    flex-flow: column;
+    .main {
+        flex: 1;
+        overflow: hidden;
+        .tab-content {
+            background: $gray-bg;
+            .target-box {
+                margin-top: 1rem;
+                font-size: 1.2rem;
+                line-height: 2rem;
+                background: $white-font;
+                .deadline {
+                    display: block;
+                    font-size: 1.2rem;
+                    padding-bottom: 1rem;
+                    padding-top: 1rem;
+                    margin-top: -1rem;
+                    text-align: center;
+                    background: $gray-bg url('../../common/images/bg_title.png') no-repeat scroll center center;
+                    background-size: 120%;
+                    span {
+                        height: 2.5rem;
+                        line-height: 2.5rem;
+                        background: $orange-font;
+                        display: block;
+                        color: $white-font;
+                        width: 60%;
+                        margin: 0 auto;
+                        border-radius: 25px;
+                    }
+                }
+                h3 {
+                    font-size: 1.4rem;
+                    margin-bottom: 1rem;
+                    padding: 1rem 1.5rem;
+                    border-bottom: solid 1px $gray-border;
+                    color: #000;
+                }
+                .target-txt {
+                    margin: 0 1.5rem;
+                    padding: 1rem;
+                    background: #f7f8f9;
+                    border-radius: 0.6rem;
+                    .item-target {
+                        display: inline-block;
+                        width: 49%;
+                        text-align: center;
+                        line-height: 3rem;
+                        .item-title {
+                            font-size: 1.3rem;
+                            margin: 0.5rem 0;
+                        }
+                        .item-cnt {
+                            font-size: 2.5rem;
+                            em {
+                                font-style: normal;
+                                display: block;
+                                font-size: 1.1rem;
+                                font-weight: normal;
+                                color: $gray-font;
+                            }
+                            &.item-drop{
+                                color: #70da1a;
+                            }
+                        }
+                    }
+                    .rank {
+                        text-align: center;
+                        height: 3rem;
+                        line-height: 3rem;
+                        background: $orange-font;
+                        color: $white-font;
+                        margin: 1rem auto;
+                        font-size: 1.3rem;
+                        border-radius: 25px;
+                        width: 100%;
+                        border-bottom: 1px solid #eee;
+                    }
+                    .item-p {
+                        line-height: 2rem;
+                        height: 2rem;
+                        padding-bottom: 0.5rem;
+                        clear: both;
+                        label{
+                            float: left;
+                            color: #4d4d4d;
+                            [class^="icon-"]{
+                                padding-right: 1rem;
+                            }
+                        }
+                        strong{
+                            float: right;
+                            font-weight: normal;
+                            color: #b5b5b5;
+                            em{
+                                font-style: normal;
+                                color: #ff9d6f;
+                                padding-right: 0.8rem;
+                            }
+                        }
+                    }
+                    .item-special1{
+                        font-size: 1.2rem;
+                        padding: 0.8rem 0;
+                        height: auto;
+                    }
+                    .item-date {
+                        text-align: right;
+                        line-height: 2rem;
+                    }
+                }
+                .rank-detail{
+                    border-top: 1px solid #eee;
+                    padding: 1.5rem 0;
+                    .item-text {
+                        text-align: center;
+                        line-height: 2rem;
+                        margin: 0.5rem 0;
+                        font-size: 1.1rem;
+                        label {
+                            background: linear-gradient(-60deg, white 0, white 15px, $orange-font 0, $orange-font 80px);
+                            padding: 0.2rem 1.5rem 0.2rem 0.5rem;
+                            margin-right: 1rem;
+                            color: $white-font;
+                            display: inline-block;
+                            width: 6rem;
+                        }
+                        span{
+                            display: inline-block;
+                            width: 7rem;
+                            text-align: left;
+                        }
+                        em {
+                            font-style: normal;
+                            font-size: 1.4rem;
+                            padding: 0 0.2rem;
+                        }
+                        &.item-new{
+                            label{
+                                background: linear-gradient(-60deg, white 0, white 17px, #f8d147 0, #f8d147 80px);
+                            }
+                        }
+                        &.item-improve{
+                            label{
+                                background: linear-gradient(-60deg, white 0, white 17px, #f98355 0, #f98355 80px);
+                            }
+                        }
+                        &.item-lost{
+                            label{
+                                background: linear-gradient(-60deg, white 0, white 17px, #bff847 0, #bff847 80px);
+                            }
+                        }
+                    }
+                }
+            }
+            .target-daily{
+                .target-txt{
+                    background: #fff;
+                    padding: 0;
+                    .item-special2{
+                        padding-bottom: 0;
+                        margin-bottom: 0.5rem;
+                        background: #f7f8f9;
+                        border-radius: 0.6rem;
+                        text-align: center;
+                        font-size: 1.1rem;
+                        height: 3rem;
+                        line-height: 3rem;
+                        color: #b5b5b5;
+                    }
+                    .item-title{
+                        text-align: center;
+                        padding: 0.5rem 0;
+                        line-height: 2rem;
+                        .ico_title{
+                            background: url('../../common/images/ico_title.png') no-repeat scroll center center;
+                            background-size: 100%;
+                            width: .5rem;
+                            height: .5rem;
+                            display: inline-block;
+                            vertical-align: middle;
+                            margin: 0 0.2rem;
+                        }
+                    }
+                    .items-collection{
+                        background: #f7f8f9;
+                        border-radius: 0.6rem;
+                        padding: 1.5rem 1rem;
+                    }
+                }
+            }
+            .target-box-aum {
+                .item-cnt-red {
+                    color: $orange-font;
+                }
+                .item-cnt-green {
+                    color: $green-font;
+                }
+            }
+            .target-box-vip {
+                .item-cnt-red {
+                    color: $orange-font;
+                }
+                .item-cnt-green {
+                    color: $green-font;
+                }
+            }
+            .page-result{
+                .target-box{
+                    padding-bottom: 1.5rem;
+                    h3{
+                        border-bottom: none;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .page-rank{
+                .target-box{
+                    padding-bottom: 1.5rem;
+                    .target-txt{
+                        background: url('../../common/images/bg_split.png') repeat scroll center center;
+                    }
+                    .tips{
+                        text-align: center;
+                        font-size: 1rem;
+                        padding-top: 1rem;
+                        color: #b7b7b7;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.nav {
+    background: $white-font;
+    .navItem {
+        display: inline-block;
+        width: 32%;
+        text-align: center;
+        box-sizing: border-box;
+        span {
+            display: inline-block;
+            width: 60%;
+            padding: 1rem 0;
+            font-size: 1.2rem;
+        }
+    }
+    .current {
+        span {
+            border-bottom: 5px solid $red-font;
+        }
+    }
+}

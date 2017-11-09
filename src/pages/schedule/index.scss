@@ -1,0 +1,99 @@
+$red-font: #E73636; //红色 目标栏目下划线颜色
+$white-font: #fff; //白色
+$orange-font: #fe704c; //橙色
+@import '../../common/css/index';
+.mission-list{
+    padding: 0.8rem;
+    background: #fff;
+    h3{
+        font-size: 1.2rem;
+        padding-bottom: 0.6rem;
+    }
+    .test{
+        position: relative;
+        height: 5rem;
+        margin-bottom: 0.6rem;
+        .ui-checkbox{
+            position: absolute;
+            top: 30%;
+            left: 0.3rem;
+        }
+        .mission-item{
+            background: -webkit-linear-gradient(top,#c5c5c5,#a1a1a1);
+            border-radius: 0.6rem;
+            height: 4rem;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            font-size: 1.2rem;
+            box-sizing: initial;
+            position: absolute;
+            width: 92%;
+            top: 0;
+            left: 0;
+            right: 0;
+            .mission-time{
+                float: left;
+                label{
+                    font-size: 1.3rem;
+                    display: block;
+                    padding-bottom: 0.5rem;
+                }
+            }
+            .mission{
+                float: none;
+                line-height: 4rem;
+            }
+            &.mission-unallocated{
+                left: 4rem !important;
+                position: relative;
+                width: 75%;
+            }
+            &.mission-allocated{
+                background: -webkit-linear-gradient(top,#ff9d6e,#f85944);
+                .mission{
+                    float: right;
+                    line-height: 2rem;
+                    height: 4rem;
+                    font-size: 1.1rem;
+                    overflow: hidden;
+                    width: 13.5rem;
+                }
+            }
+        }
+    }
+    
+}
+.nav{
+    border-bottom: 1px solid #eee;
+    .navItem{
+        background: #fff;
+        width: 49.2%;
+        display: inline-block;
+        text-align: center;
+        height: 3rem;
+        line-height: 3rem;
+            &.current{
+                span{
+                    border-bottom: 5px solid #e73636;
+                    height: 3rem;
+                    line-height: 3rem;
+                    width: 50%;
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+    }
+}
+
+.footer{
+    border-top: 1px solid #eee;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    background: #fff;
+    button{
+        color: #f85944;
+        font-size: 1.5rem;
+        background: #fff;
+    }
+}

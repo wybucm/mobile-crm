@@ -1,0 +1,66 @@
+@import "../../../common/css/index";
+.ui-page > main {
+  flex-flow: column;
+  .clue-group {
+    padding: 0 1rem 2rem;
+    & > div {
+      position: relative;
+      margin-bottom: 1rem;
+      padding-top: .8rem;
+      background-color: white;
+      border-radius: .6rem;
+      & > div {
+        overflow: hidden;
+        padding: .3rem 2.2rem;
+        & > div {
+          float: left;
+          margin-left: -0.6rem;
+        }
+        & > span {
+          float: right;
+        }
+      }
+      & > div:nth-child(1) {
+        & > span {
+          line-height: 2;
+        }
+      }
+      & > button {
+        float: right;
+        padding: .3rem;
+        margin: .1rem 2rem;
+        background-color: white;
+        color: $orange-font;
+      }
+      & > p {
+        position: absolute;
+        top: .5rem;
+        right: -.83rem;
+        width: 2.6rem;
+        height: .15rem;
+        font-size: .1rem;
+        text-align: center;
+        color: white;
+        transform: rotate(40deg);
+        border-left: 1.05rem solid transparent;
+        border-right: .8rem solid transparent;
+        border-bottom: .9rem solid $orange-font;
+      }
+    }
+  }
+}
+
+.ui-page > .footer {
+  overflow: hidden;
+  background-color: white;
+  & > button {
+    float: left;
+    padding: .8rem 1rem;
+    width: 50%;
+    background-color: $orange-bg;
+    color: white;
+  }
+  & > button:nth-child(2) {
+    background-color: $gray-btn;
+  }
+}

@@ -1,0 +1,22 @@
+@import '../common';
+%ui-picker {
+    @extend %ui-common-window;
+    position: fixed;
+    z-index: 5000;
+    transition: opacity .3s linear;
+    &>div {
+        position: absolute;
+        bottom: 3rem;
+        left: 1rem;
+        right: 1rem;
+        transition: transform .3s cubic-bezier(.4, 0, 0, 1);
+    }
+}
+
+.v-picker-enter,
+.v-picker-leave-to {
+    opacity: 0;
+    &>div {
+        transform: translate3d(0, calc(100% + 3rem), 0);
+    }
+}
